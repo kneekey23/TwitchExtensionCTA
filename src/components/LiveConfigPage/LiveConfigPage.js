@@ -1,5 +1,6 @@
 import React from 'react'
 import Authentication from '../../util/Authentication/Authentication'
+import {FormControl, Button} from 'react-bootstrap'
 
 import './LiveConfigPage.css'
 
@@ -12,7 +13,8 @@ export default class LiveConfigPage extends React.Component{
         this.twitch = window.Twitch ? window.Twitch.ext : null
         this.state={
             finishedLoading:false,
-            theme:'light'
+            theme:'dark',
+            link: ''
         }
     }
 
@@ -58,13 +60,18 @@ export default class LiveConfigPage extends React.Component{
         }
     }
     
+    handleChange(e){
+        this.setState({link: e.target.value});
+    }
+
     render(){
         if(this.state.finishedLoading){
             return (
                 <div className="LiveConfigPage">
                     <div className={this.state.theme === 'light' ? 'LiveConfigPage-light' : 'LiveConfigPage-dark'} >
-                        <p>Hello world!</p>
-                        <p>This is the live config page! </p>
+                        <p>Hello AWS Broadcaster!</p>
+                        <FormControl type="text" placeholder="Enter the Link you would like to display" value={this.state.link} onChange={this.handleChange} />
+                        <Button bsStyle="primary">Click To Display</Button>
                     </div>
                 </div>
             )

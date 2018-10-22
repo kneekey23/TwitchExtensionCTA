@@ -1,7 +1,9 @@
 import React from 'react'
 import Authentication from '../../util/Authentication/Authentication'
+import {Button} from 'react-bootstrap'
 
 import './App.css'
+import { ButtonGroup } from 'react-bootstrap';
 
 export default class App extends React.Component{
     constructor(props){
@@ -12,8 +14,9 @@ export default class App extends React.Component{
         this.twitch = window.Twitch ? window.Twitch.ext : null
         this.state={
             finishedLoading:false,
-            theme:'light',
-            isVisible:true
+            theme:'dark',
+            isVisible:true,
+            linkReceived: 'https://aws.amazon.com/twitch'
         }
     }
 
@@ -74,14 +77,20 @@ export default class App extends React.Component{
     render(){
         if(this.state.finishedLoading && this.state.isVisible){
             return (
+                // <div className="App">
+                //     <div className={this.state.theme === 'light' ? 'App-light' : 'App-dark'} >
+                //         <p>Hello world! Nicki</p>
+                //         <p>My token is: {this.Authentication.state.token}</p>
+                //         <p>My opaque ID is {this.Authentication.getOpaqueId()}.</p>
+                //         <div>{this.Authentication.isModerator() ? <p>I am currently a mod, and here's a special mod button <input value='mod button' type='button'/></p>  : 'I am currently not a mod.'}</div>
+                //         <p>I have {this.Authentication.hasSharedId() ? `shared my ID, and my user_id is ${this.Authentication.getUserId()}` : 'not shared my ID'}.</p>
+                //     </div>
+                // </div>
                 <div className="App">
-                    <div className={this.state.theme === 'light' ? 'App-light' : 'App-dark'} >
-                        <p>Hello world!</p>
-                        <p>My token is: {this.Authentication.state.token}</p>
-                        <p>My opaque ID is {this.Authentication.getOpaqueId()}.</p>
-                        <div>{this.Authentication.isModerator() ? <p>I am currently a mod, and here's a special mod button <input value='mod button' type='button'/></p>  : 'I am currently not a mod.'}</div>
-                        <p>I have {this.Authentication.hasSharedId() ? `shared my ID, and my user_id is ${this.Authentication.getUserId()}` : 'not shared my ID'}.</p>
-                    </div>
+                <ButtonGroup vertical block>
+                <Button href={this.state.linkReceived}>Click Here to see what they are talking about</Button>
+                </ButtonGroup>
+
                 </div>
             )
         }else{
