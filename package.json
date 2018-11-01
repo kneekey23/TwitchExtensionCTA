@@ -1,49 +1,23 @@
 {
-  "name": "react-frontend",
+  "name": "cta",
   "version": "1.0.0",
-  "description": "",
+  "description": "Call to Action extension",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development",
-    "cert": "./bin/generate_cert.sh server",
-    "host": "webpack-dev-server --mode development --devrig"
+    "cert": "node bin/generate_cert.js server",
+    "start": "node services/backend"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^23.4.2",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
-    "enzyme": "^3.4.1",
-    "enzyme-adapter-react-16": "^1.2.0",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.2.0",
-    "jest": "^23.5.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.3"
-  },
+  "keywords": [
+    "twitch",
+    "extension"
+  ],
+  "author": "AM Grobelny <amsg@amazon.com>",
+  "license": "Apache-2.0",
   "dependencies": {
-    "jsonwebtoken": "^8.3.0",
-    "react": "^16.5.2",
-    "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.5.2"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/test/jestsetup.js"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.2.0"
   }
 }
