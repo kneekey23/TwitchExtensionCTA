@@ -47,9 +47,10 @@ twitch.onAuthorized(function (auth) {
     $.ajax(requests.get);
 });
 
-function updateLink(url) {
+function updateLink(url, title) {
     twitch.rig.log('Updating link');
     $("#actionLink").attr('href', url);
+    $("#actionLink").html(title);
 
 }
 
@@ -73,7 +74,10 @@ $(function () {
         if (!token) { return twitch.rig.log('Not authorized'); }
         twitch.rig.log('Requesting a link to go live');
         var linkToDisplay = $("#linkInput").val();
+        var linkTitle = $("#linkTitleInput").val()
         console.log(linkToDisplay);
+        console.log(linkTitle);
+
         var url = hostUrl + 'cta';
         var settings = {
             headers: {
@@ -83,7 +87,7 @@ $(function () {
             dataType: 'json',
             contentType: 'application/json',
             data: JSON.stringify({
-                message: linkToDisplay
+                message: {link: linkToDisplay, title: linkTitle}
             }),
             success: function (obj, status) {
                 twitch.rig.log('Success...');
@@ -106,12 +110,16 @@ $(function () {
 
     // listen for incoming broadcast message from our EBS
     console.log(twitch);
-    twitch.listen('broadcast', function (target, contentType, link) {
-        twitch.rig.log('Received link');
+    twitch.listen('broadcast', function (target, contentType, obj) {
+        console.log('Received link');
+        console.log(obj);
+        
+        var parsedObj = JSON.parse(obj);
+        console.log(parsedObj.link + parsedObj.title);
         // twitch.rig.log(contentType);
         // twitch.rig.log(target);
         // twitch.rig.log(link.message);
-        link = link;
-        updateLink(link);
+        link = parsedObj.link;
+        updateLink(link, parsedObj.title);
     });
 });
