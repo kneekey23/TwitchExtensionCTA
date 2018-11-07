@@ -7,8 +7,16 @@
     <div id="app"></div>
     <script src="https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js"></script>
     <script src="./jquery-3.3.1.min.js""></script>
-    <script src="config.js" type="text/javascript"></script>
+    <script src="./notify.min.js"></script>
+    <script src="./config.js" type="text/javascript"></script>
     <h2>Configuration</h2>
-    <p>No configuration required.</p>
+    <p>Please choose where you would like the click event to show up for the viewer?</p>
+    <select id="configClass">
+        <option value="upperright">Upper Right Corner</option>
+        <option value="upperleft">Upper Left Corner</option>
+        <option value="lowerright">Lower Right Corner</option>
+        <option value="lowerleft">Lower Left Corner</option>
+      </select>
+      <button type="button" id="saveConfig">Save Configuration Changes</button>
 </body>
 </html>

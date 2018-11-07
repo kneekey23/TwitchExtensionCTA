@@ -18,10 +18,28 @@
 
 }
 
-.linkBackground {
+.upperright {
     position: absolute;
-    top: 100;
-    margin-top: 105px;
-    margin-right: 10px;
-    right: 0;
+    top: 105px;
+    right: 10px;
+}
+
+.upperleft {
+    position: absolute;
+    top: 105px;
+    left: 10px;
+}
+
+.lowerleft {
+    position: absolute;
+    bottom: 80px;
+    margin-bottom: 5px;
+    left: 10px;
+}
+
+.lowerright {
+    position: absolute;
+    bottom: 80px;
+    margin-bottom: 5px;
+    right: 10px;
 }
