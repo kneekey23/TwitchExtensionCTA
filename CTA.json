@@ -1,0 +1,108 @@
+{
+  "backendCommand": "",
+  "backendFolderName": "",
+  "extensionViews": [
+    {
+      "id": "2",
+      "label": "live dashboard",
+      "channelId": "198896291",
+      "type": "dashboard",
+      "features": {
+        "isChatEnabled": false
+      },
+      "linked": true,
+      "linkedUserId": "265737932",
+      "mode": "dashboard",
+      "isPopout": false,
+      "role": "Broadcaster",
+      "x": 0,
+      "y": 0,
+      "orientation": "Portrait",
+      "frameSize": {
+        "width": 640,
+        "height": 480
+      }
+    },
+    {
+      "id": "3",
+      "label": "overlay",
+      "channelId": "198896291",
+      "type": "video_overlay",
+      "features": {
+        "isChatEnabled": false
+      },
+      "linked": false,
+      "linkedUserId": "",
+      "mode": "viewer",
+      "isPopout": false,
+      "role": "Broadcaster",
+      "x": 0,
+      "y": 0,
+      "orientation": "Portrait",
+      "frameSize": {
+        "width": 640,
+        "height": 480
+      }
+    }
+  ],
+  "frontendCommand": "",
+  "frontendFolderName": "public",
+  "manifest": {
+    "anchor": "video_overlay",
+    "assetUrls": [],
+    "authorName": "kneekey23",
+    "bitsEnabled": false,
+    "canInstall": true,
+    "configUrl": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/config.html",
+    "configurationLocation": "hosted",
+    "description": "Create a click to action button overlayed on the video while live streaming. instead of dropping a link in the chat while speaking about a topic online, a broadcaster can push a link while live streaming to be overlayed on the video for the viewers.",
+    "eulaTosUrl": "",
+    "hasChatSupport": false,
+    "iconUrl": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/icon/178/327/636777402168645464.png",
+    "iconUrls": {
+      "100x100": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/icon/178/327/636777402168645464.png",
+      "24x24": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/taskbar-icon/178/328/636777403357032426.png",
+      "300x200": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/discovery-icon/178/325/636777392971229838.png"
+    },
+    "id": "q2xwwcqgpcgtdr30h50ocncfrwx15z",
+    "installationCount": -42,
+    "liveConfigUrl": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/live_config.html",
+    "name": "CTA",
+    "panelHeight": 0,
+    "privacyPolicyUrl": "",
+    "requestIdentityLink": false,
+    "requiredBroadcasterAbilities": [],
+    "screenshotUrls": [
+      "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/screenshots/240/898/screenshot1.png",
+      "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/screenshots/240/899/screenshot2.png",
+      "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/internal/screenshots/240/900/screenshot3.png"
+    ],
+    "sku": "",
+    "state": "Released",
+    "summary": "Create a click to action button overlayed on the video while live streaming",
+    "supportEmail": "aws-twitch-dev@amazon.com",
+    "vendorCode": "",
+    "version": "0.0.1",
+    "viewerUrl": "",
+    "viewerUrls": {
+      "videoOverlay": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/video_overlay.html"
+    },
+    "views": {
+      "videoOverlay": {
+        "viewerUrl": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/video_overlay.html",
+        "canLinkExternalContent": true
+      },
+      "config": {
+        "viewerUrl": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/config.html",
+        "canLinkExternalContent": false
+      },
+      "liveConfig": {
+        "viewerUrl": "https://q2xwwcqgpcgtdr30h50ocncfrwx15z.ext-twitch.tv/q2xwwcqgpcgtdr30h50ocncfrwx15z/0.0.1/23cbeba78fc699bedcf86e62a5308df1/live_config.html",
+        "canLinkExternalContent": false
+      }
+    },
+    "whitelistedConfigUrls": [],
+    "whitelistedPanelUrls": []
+  },
+  "name": "CTA"
+}
