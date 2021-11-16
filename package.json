@@ -14,7 +14,7 @@
   "author": "AM Grobelny <amsg@amazon.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.349.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.18.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
